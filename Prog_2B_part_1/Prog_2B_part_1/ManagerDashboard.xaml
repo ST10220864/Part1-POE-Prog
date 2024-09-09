@@ -1,0 +1,61 @@
+﻿<Window x:Class="Prog_2B_part_1.ManagerDashboard"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Manager Dashboard"
+        Height="350" Width="450"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Background="#F0F0F0">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Title -->
+        <Label Content="Approve Verified Claims" 
+               FontSize="18" 
+               FontWeight="Bold" 
+               HorizontalAlignment="Center" 
+               VerticalAlignment="Top" 
+               Margin="0,20,0,0" 
+               Foreground="#333333"/>
+
+        <!-- ListView -->
+        <ListView x:Name="VerifiedClaimsListView" 
+                  Grid.Row="1"
+                  HorizontalAlignment="Stretch" 
+                  VerticalAlignment="Stretch" 
+                  Margin="20,10,20,10" 
+                  Background="White"
+                  BorderBrush="#DADADA"
+                  BorderThickness="1">
+            <!-- Placeholder for listing verified claims -->
+        </ListView>
+
+        <!-- Buttons -->
+        <StackPanel Grid.Row="2" 
+                    Orientation="Horizontal" 
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Center" 
+                    Margin="0,10,0,20">
+            <Button Content="Approve Claim" 
+                    Width="120" 
+                    Margin="10,0" 
+                    FontSize="14" 
+                    Background="#4CAF50" 
+                    Foreground="White" 
+                    BorderBrush="#388E3C"
+                    BorderThickness="1"/>
+            <Button Content="Reject Claim" 
+                    Width="120" 
+                    Margin="10,0" 
+                    FontSize="14" 
+                    Background="#F44336" 
+                    Foreground="White" 
+                    BorderBrush="#C62828"
+                    BorderThickness="1"/>
+        </StackPanel>
+    </Grid>
+</Window>
